@@ -125,11 +125,9 @@ public class DynamicSIPFragment extends Fragment implements ItemAdater.ItemAdate
         int[] data={Integer.valueOf(sipData.getEquity()), 100-Integer.valueOf(sipData.getEquity())};
         int[] color={Color.RED,Color.BLUE};
 
-        View view = new PieChart(getContext(),2,data,color, innerCircle.getWidth(), innerCircle.getHeight());
-        RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-        layoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-        graph.addView(view, layoutParams);
+        View view = new PieChart(getContext(),2,data,color, graph.getWidth(), graph.getHeight());
+        graph.addView(view, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
     private void setBackground(View view, int to) {
