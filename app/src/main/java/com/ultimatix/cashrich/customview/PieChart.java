@@ -23,8 +23,8 @@ public class PieChart extends View {
         this.numberOfparts=numOfItems;
         this.data=data;
         this.color=color;
-        this.w = w+50;
-        this.h = h+50;
+        this.w = w;
+        this.h = h;
     }
 
     @Override
